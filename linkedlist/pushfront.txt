@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+// Define a structure for a Node in the linked list
+struct Node {
+    int data;       // Data part of the node
+    Node* next;     // Pointer to the next node
+};
+
+// Define a LinkedList class to manage the linked list
+class LinkedList {
+private:
+    Node* head;     // Pointer to the head (first node) of the linked list
+
+public:
+    // Constructor to initialize the linked list with an empty head
+    LinkedList() : head(nullptr) {}
+
+    // Function to add a new node at the front of the linked list
+    void pushFront(int value) {
+        // Create a new node dynamically
+        Node* newNode = new Node();
+        newNode->data = value;  // Assign the value to the new node
+        newNode->next = head;  // Point the new node to the current head
+        head = newNode;        // Update the head to the new node
+    }
+
+    // Function to display the linked list
+    void display() {
+        Node* temp = head;  // Start from the head
+        while (temp != nullptr) {  // Traverse until the end of the list
+            cout << temp->data << " -> ";  // Print the data of each node
+            temp = temp->next;  // Move to the next node
+        }
+        cout << "NULL" << endl;  // Indicate the end of the list
+    }
+};
+
+int main() {
+    LinkedList list;  // Create an instance of the LinkedList class
+
+    // Add elements to the front of the linked list
+    list.pushFront(10);
+    list.pushFront(20);
+    list.pushFront(30);
+
+    // Display the linked list
+    list.display();
+
+    return 0;
+}

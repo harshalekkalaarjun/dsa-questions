@@ -1,0 +1,144 @@
+Linked List Notes
+
+A linked list is a linear data structure where elements (nodes) are stored in non-contiguous memory locations. Each node contains:
+1. Data (the value to store)
+2. A reference (pointer) to the next node in the sequence
+
+Types of Linked Lists:
+- Singly Linked List: Each node points to the next node.
+- Doubly Linked List: Each node points to both the next and previous nodes.
+- Circular Linked List: The last node points back to the first node.
+
+Advantages:
+- Dynamic size (can grow or shrink at runtime)
+- Easy insertion and deletion of nodes
+
+Disadvantages:
+- No direct access to elements (must traverse from the head)
+- Extra memory for storing pointers
+
+Basic Operations:
+- Insertion (at beginning, end, or middle)
+- Deletion (by value or position)
+- Traversal (visiting each node)
+- Searching (finding a node with a specific value)
+
+Use Cases:
+- Implementing stacks and queues
+- Undo functionality in applications
+- Dynamic memory allocation
+- Sorting (arranging nodes in a specific order)
+- Merging (combining two linked lists into one)
+- Reversing (changing the direction of pointers to reverse the list)
+
+Advanced Concepts:
+1. Detecting and Removing Cycles:
+    - Use Floyd’s Cycle Detection Algorithm (Tortoise and Hare approach) to detect cycles.
+    - To remove a cycle, identify the node where the cycle begins and adjust pointers.
+
+2. Flattening a Linked List:
+    - Useful in multi-level linked lists where nodes can have child lists.
+    - Flattening involves converting the multi-level structure into a single-level list.
+
+3. Skip Lists:
+    - A variation of linked lists with additional pointers to skip nodes for faster search operations.
+    - Commonly used in databases and memory management.
+
+4. Memory Management in Embedded Systems:
+    - Linked lists are often used in embedded systems for dynamic memory allocation.
+    - They help manage memory efficiently in constrained environments.
+
+5. Cache Locality:
+    - Linked lists have poor cache locality compared to arrays due to non-contiguous memory allocation.
+    - This can impact performance in systems with limited cache.
+
+6. Thread-Safe Linked Lists:
+    - In multi-threaded environments, linked lists need synchronization mechanisms (e.g., locks or atomic operations) to ensure thread safety.
+
+Best Practices:
+- Always initialize the head pointer to NULL before using a linked list.
+- Use dummy nodes to simplify edge cases in insertion and deletion.
+- Avoid memory leaks by freeing unused nodes.
+- Use smart pointers in modern C++ to manage memory automatically.
+
+Applications in FAANG Companies:
+- Frequently used in coding interviews to test problem-solving and data structure knowledge.
+- Problems like LRU Cache, Merge K Sorted Lists, and Detect Cycle in a Linked List are common.
+
+Applications in Embedded Systems:
+- Task scheduling in real-time operating systems (RTOS).
+- Managing free memory blocks in dynamic memory allocation.
+- Implementing communication protocols with linked buffers.
+
+Graphic Representation:
+
+Singly Linked List:
+[1] -> [2] -> [3] -> [4] -> NULL
+
+Doubly Linked List:
+NULL <- [1] <-> [2] <-> [3] <-> [4] -> NULL
+
+Circular Linked List:
+[1] -> [2] -> [3] -> [4] --|
+ ^-------------------------|
+
+Legend:
+[ ] : Node (contains data)
+->  : Pointer to next node
+<-> : Pointers to both next and previous nodes
+NULL: End of the list
+
+
+# Linked List – GATE & FAANG Quick Notes
+
+## GATE Key Points
+- **Definition:** Linear data structure, nodes with data + pointer(s).
+- **Types:** Singly, Doubly, Circular, Skip List.
+- **Advantages:** Dynamic size, easy insertion/deletion.
+- **Disadvantages:** No random access, extra memory for pointers.
+- **Operations:** Insert, Delete, Search, Traverse, Reverse, Merge.
+- **Cycle Detection:** Floyd’s (Tortoise & Hare).
+- **Applications:** Memory management, stacks/queues, undo, scheduling.
+
+---
+
+- **Remove Duplicates from Sorted List**
+  - LeetCode 83: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+- **Remove Duplicates from Unsorted List**
+  - LeetCode 1836: https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/
+- **Partition List (all nodes < x before nodes >= x)**
+  - LeetCode 86: https://leetcode.com/problems/partition-list/
+- **Odd Even Linked List**
+  - LeetCode 328: https://leetcode.com/problems/odd-even-linked-list/
+- **Palindrome Linked List**
+  - LeetCode 234: https://leetcode.com/problems/palindrome-linked-list/
+- **Sort List (Merge Sort on Linked List)**
+  - LeetCode 148: https://leetcode.com/problems/sort-list/
+- **Swap Nodes in Pairs**
+  - LeetCode 24: https://leetcode.com/problems/swap-nodes-in-pairs/
+- **Reverse Nodes in k-Group**
+  - LeetCode 25: https://leetcode.com/problems/reverse-nodes-in-k-group/
+- **Rotate List**
+  - LeetCode 61: https://leetcode.com/problems/rotate-list/
+- **Remove Linked List Elements (by value)**
+  - LeetCode 203: https://leetcode.com/problems/remove-linked-list-elements/
+- **Intersection of Two Linked Lists II (with cycles)**
+  - LeetCode 160: https://leetcode.com/problems/intersection-of-two-linked-lists/
+- **Linked List Random Node**
+  - LeetCode 382: https://leetcode.com/problems/linked-list-random-node/
+- **Reorder List (L0→Ln→L1→Ln-1→L2→Ln-2...)**
+  - LeetCode 143: https://leetcode.com/problems/reorder-list/
+- **Delete Middle Node**
+  - LeetCode 2095: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
+- **Convert Binary Number in a Linked List to Integer**
+  - LeetCode 1290: https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+- **Add Two Numbers II (digits in forward order)**
+  - LeetCode 445: https://leetcode.com/problems/add-two-numbers-ii/
+- **Flatten a Multilevel Doubly Linked List**
+  - LeetCode 430: https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
+
+> **Tip:** For company-specific questions, filter by company tag on LeetCode or GeeksforGeeks.
+
+---
+
+**Practicing these will prepare you for Google, Microsoft, Amazon, and other top tech interviews!**
