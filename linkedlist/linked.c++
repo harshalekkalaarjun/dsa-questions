@@ -23,7 +23,7 @@ class LIST{
         LIST(){head = tail = NULL;}
         void  pushh_front(int val){
             Node* newNode = new Node(val);
-            Node newNode(val); // dayamic oject
+            //Node newNode(val); // dayamic oject  // Remove this line
             if ( head == NULL) {
                 head = tail = newNode;return ;
             } else {
@@ -31,9 +31,15 @@ class LIST{
                 head = newNode;
             }
         }
-        void push_back(int val){
-            Node* newNdoe = new Node(val);
-        }
+        // void push_back(int val){
+        //     Node* newNode = new Node(val);
+        //     if (head == NULL){
+        //         head = tail = newNode;
+        //         return;
+        //     }
+        //     tail->next = newNode;
+        //     tail = newNode;
+        // }
         void printll(){
             Node *temp = head;
             while (temp != NULL){
@@ -51,6 +57,11 @@ class LIST{
 int main(){
     LIST ll;
     ll.pushh_front(10);
+    ll.pushh_front(20);
+    ll.pushh_front(30);
+    ll.pushh_front(40);
+    ll.printll();
+    cout << "NULL" << endl; // To indicate the end of the list
 
     return 0;
 
