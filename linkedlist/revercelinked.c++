@@ -6,6 +6,8 @@
 // This code implements a singly linked list in C++ with various operations such as insertion, deletion, and searching.
 // This code is a simple implementation of a singly linked list in C++.
 // This code implements a singly linked list in C++ with various operations such as insertion, deletion, and searching.
+// revrse linked list in C++
+
 #include <iostream>
 using namespace std;
 
@@ -171,8 +173,18 @@ class LIST{     // LIST class definition
             }   cout << "Index out of bounds" << ": "<< index <<  endl; // If the index is out of bounds, print a message
             return; // Return from the function
         }
-
-
+        void reversceList(){
+            Node* prev = NULL;
+            Node* current = head;
+            Node* next = NULL;
+            while (current != NULL){
+                next = current->next;
+                current-> next = prev;
+                prev = current;
+                current = next;
+                
+            }
+        }
 };
 
 // Main function to demonstrate the linked list operations
