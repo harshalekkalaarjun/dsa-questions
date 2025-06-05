@@ -179,11 +179,11 @@ class LIST{     // LIST class definition
             Node* next = NULL;
             while (current != NULL){
                 next = current->next;
-                current-> next = prev;
+                current->next = prev;
                 prev = current;
                 current = next;
-                
             }
+            head = prev;
         }
 };
 
@@ -212,7 +212,12 @@ int main(){
     ll.searchbyvalue(100); // Searching for a value that does not exist
     ll.searchbyindex(2); // Searching for a value at index 2
     ll.searchbyindex(5); // Searching for a value at an index that is out of bounds
-    ll.searchbyindex(0); // Searching for a value at index 0
+    ll.searchbyindex(0);
+    ll.printll(); // Searching for a value at index 0
+    ll.reversceList(); // Reverse the linked list
+    cout << "Linked List after reversing: ";
+    printf("\n");
+    ll.printll(); // Print the linked list after reversing
 
     return 0;
 
