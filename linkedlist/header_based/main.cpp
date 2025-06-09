@@ -31,5 +31,9 @@ int main() {
     } else {
         cout << "No cycle detected in the linked list." << endl;
     }
+    ll.reversceList();
+    cout << "Linked List after reversing: ";    
+    ll.printll();
+    printf("\n");
     return 0; // Return success
 }

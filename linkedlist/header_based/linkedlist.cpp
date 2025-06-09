@@ -49,3 +49,15 @@ bool LIST::hasCycle() {
     }
     return false;
 }
+void LIST::reversceList(){
+            Node* prev = NULL;
+            Node* current = head;
+            Node* next = NULL;
+            while (current != NULL){
+                next = current->next;
+                current->next = prev;
+                prev = current;
+                current = next;
+            }
+            head = prev;
+}

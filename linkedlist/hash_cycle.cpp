@@ -46,7 +46,8 @@ class LIST{
 
     }
     
-    bool hash_cycle(){
+    bool hash_cycle(){// Function to check if the linked list has a cycle
+        if (head == NULL) return false; // If the list is empty, return false
         Node* slow = head; // Slow pointer starts at the head
         Node* fast = head; // Fast pointer starts at the head
         while( fast != NULL && fast-> next != NULL){
@@ -58,7 +59,6 @@ class LIST{
         }
         return false; // If no cycle is detected, return false
     }
-
 };
 int main (){
     LIST ll ; 
